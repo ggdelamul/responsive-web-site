@@ -1,0 +1,83 @@
+/*general size */
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular";
+}
+.sections {
+  padding: 20px 0;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+/*header*/
+header {
+  height: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  position: relative;
+}
+header > .container > .row > .icone {
+  position: absolute;
+  left: 80%;
+  top: 20px;
+  z-index: 10;
+  display: none;
+}
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+header .logo h2 {
+  font-size: 35px;
+}
+header nav .nav-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+header nav .nav-list a {
+  display: block;
+  padding: 15px;
+  margin: 9px 0px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+header nav .nav-list a:hover {
+  color: #7cb62f;
+}
+@media screen and (max-width: 575px) {
+  header nav .nav-list {
+    display: none;
+    text-align: center;
+    padding: 0;
+  }
+  header > .container > .row > .icone {
+    display: block;
+  }
+}
+/* home section*/
+.home {
+  height: 500px;
+  background-image: url("../img/pexels-benjamin-suter-3733269.jpg");
+  color: white;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  position: relative;
+}
+.home .home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home button {
+  color: white;
+}
