@@ -13,6 +13,30 @@ body {
   right: 0;
   background: rgba(0, 0, 0, 0.5);
 }
+.section-header.section-title {
+  font-size: 40px;
+}
+.section-header .line {
+  width: 150px;
+  background: #ddd;
+  height: 3px;
+  margin: auto;
+}
+.section-header .line span {
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: #7cb62f;
+  margin: auto;
+  position: relative;
+  bottom: 0.5px;
+}
+.section-header p {
+  width: 50%;
+  color: #888;
+  margin: 20px auto;
+  line-height: 1.5;
+}
 /*header*/
 header {
   height: auto;
@@ -102,11 +126,182 @@ header nav .nav-list a:hover {
   text-align: center;
   padding: 10px 0;
 }
+
+/*about us*/
+.about .about-info h3 {
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.about .about-info h3 span {
+  color: #7cb62f;
+}
+.about .about-info .about-info-desc {
+  line-height: 1.8;
+  color: #888;
+  margin-bottom: 20px;
+}
+.about .about-info .about-info-btn {
+  background-color: #7cb62f;
+  padding: 10px 20px;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.about .about-img {
+  width: 100%;
+}
+
+/*services*/
+.services {
+  background-color: #f7f7f7;
+}
+.services .serv {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.services .serv .icon {
+  background-color: #7cb62f;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  border-radius: 50%;
+}
+.services .serv-title {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.services .serv-desc {
+  font-size: 17px;
+  color: #888;
+  margin-bottom: 20px;
+}
+/*formulaire*/
+.inputBox {
+  position: relative;
+  width: 250px;
+  margin: 10px 0;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #7cb62f;
+
+  border-radius: 5px;
+  outline: none;
+  color: #7cb62f;
+  font-size: 1em;
+  transition: 0.5s;
+}
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #7cb62f;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #7cb62f;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background-color: white;
+  border-left: 1px solid #7cb62f;
+  border-right: 1px solid #7cb62f;
+  letter-spacing: 0.2em;
+}
+
+.inputBox input:valid,
+.inputBox input:focus {
+  border: 1px solid #7cb62f;
+}
+
+.inputBox:nth-child(2) input:valid ~ span,
+.inputBox:nth-child(2) input:focus ~ span,
+.inputBox:nth-child(3) input:focus ~ span,
+.inputBox:nth-child(3) input:focus ~ span {
+  background-color: #7cb62f;
+  color: white;
+  border-radius: 2px;
+}
+
+textarea {
+  border: 1px solid #7cb62f;
+  width: 400px;
+  height: 150px;
+  color: #7cb62f;
+}
+
+textarea:focus,
+textarea:active {
+  border: 1px solid #7cb62f;
+  color: #7cb62f;
+  outline: none !important;
+}
+textarea::placeholder {
+  color: #7cb62f;
+}
+.send {
+  background-color: #7cb62f;
+  padding: 10px 20px;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 15px;
+  width: 400px;
+}
+.send:hover {
+  background-color: #6ba51f;
+}
+/*footer*/
+.footer {
+  background-color: #f7f7f7;
+}
+.footer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #7cb62f;
+}
+.footer-section ul {
+  list-style-type: none;
+}
+.footer-section a {
+  color: #7cb62f;
+  text-decoration: none;
+}
+/*mediaqueries*/
 @media screen and (max-width: 575px) {
   .home .home-title {
     font-size: 25px;
   }
   .home button {
     margin-bottom: 10px;
+  }
+  .section-header p {
+    width: 85%;
+  }
+  .about .about-info h3 {
+    font-size: 20px;
+  }
+  .about .about-info {
+    text-align: center;
+  }
+  textarea,
+  input,
+  .send {
+    width: 100%;
   }
 }

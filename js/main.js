@@ -10,9 +10,8 @@ $(document).ready(function () {
   });
   // sticky nav bar
   $(window).scroll(function () {
-    let sc = $(this).scrollTop();
-    // console.log(sc);
-    if (sc > 100) {
+    let scrollHeight = $(this).scrollTop();
+    if (scrollHeight > 100) {
       $("header").addClass("sticky");
     } else {
       $("header").removeClass("sticky");
